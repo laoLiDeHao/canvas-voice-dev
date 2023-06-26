@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  overflow: hidden;
+  /* width: 100vw; */
+  /* height: 100vh; */
+}
+#seahorse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: -1;
+}
+#seahorse path {
+  stroke-dasharray: 3950;
+  stroke-dashoffset: 0;
+  animation: animatePath 5s infinite;
+  transition: all linear 0.5s;
+}
+
+#canvas1 {
+  /* background: blue; */
+}
+
+@keyframes animatePath {
+  0% {
+    stroke-dashoffset: 3950;
+  }
+  50% {
+    stroke-dashoffset: -3950;
+  }
+  100% {
+    stroke-dashoffset: 3950;
+  }
+}
